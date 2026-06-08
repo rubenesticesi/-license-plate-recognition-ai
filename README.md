@@ -2,6 +2,11 @@
 
 **Proyecto de Maestría - Análisis de un Problema Real y Propuesta de Solución con Inteligencia Artificial**
 
+**Desarrollado por:**
+* Edwin Perez
+* Ruben Sabogal
+* Cristian Quebrada
+
 ---
 
 ## 1. Descripción del Problema Seleccionado
