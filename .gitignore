@@ -11,7 +11,7 @@ __pycache__/
 
 # Archivos de PyTorch y Modelos
 *.pt
-!models/best.pt  # Excepto nuestro mejor modelo entrenado
+!models/best.pt
 
 # Datos crudos y exportaciones (demasiado pesados para GitHub)
 data/raw/
