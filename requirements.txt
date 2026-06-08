@@ -1,0 +1,13 @@
+ultralytics
+opencv-python
+easyocr
+pandas
+numpy
+matplotlib
+Pillow
+pyyaml
+scikit-learn
+tqdm
+fastapi
+uvicorn
+python-multipart

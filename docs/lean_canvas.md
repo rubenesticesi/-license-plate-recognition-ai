@@ -1,0 +1,9 @@
+# Lean Canvas: ALPR (Lectura Automática de Placas)
+
+| Segmentos de Clientes | Problema | Propuesta de Valor | Solución | Canales |
+| :--- | :--- | :--- | :--- | :--- |
+| - Parqueaderos públicos y privados<br>- Conjuntos residenciales<br>- Universidades y colegios<br>- Centros logísticos y empresas<br>- Operadores de peajes | - Congestión en entradas/salidas<br>- Costos altos de personal 24/7<br>- Errores en digitación manual de placas<br>- Fraude o robo de vehículos por falta de trazabilidad | Sistema inteligente, rápido y automático de lectura de placas vehiculares que agiliza el acceso, mejora la seguridad y proporciona un registro inmutable, eliminando tiempos de espera y reduciendo costos operativos. | - Detección de placas con IA (YOLOv8)<br>- Extracción de caracteres (OCR)<br>- Interfaz en tiempo real para validación de acceso<br>- Base de datos histórica (registro automático) | - Venta directa B2B<br>- Alianzas con integradores de hardware de seguridad (talanqueras, cámaras)<br>- Demostraciones (MVP web) |
+
+| Estructura de Costos | Fuentes de Ingreso | Métricas Clave | Ventaja Diferencial |
+| :--- | :--- | :--- | :--- |
+| - Servidores en la nube / Edge Computing<br>- Desarrollo y mantenimiento de software<br>- Entrenamiento y reentrenamiento de modelos IA<br>- Marketing y ventas B2B | - Licencias de software (SaaS) mensual/anual<br>- Tarifa por instalación o integración (Setup)<br>- Venta de soluciones integradas (Cámara + Edge + Software) | - Precisión del sistema (Accuracy %)<br>- Tiempo de respuesta por vehículo (milisegundos)<br>- Tiempo de espera reducido en la entrada<br>- Cantidad de integraciones activas | Solución escalable, adaptable a diferentes resoluciones de cámara, de bajo costo computacional frente a soluciones cerradas de hardware especializado, y ajustada al formato de placas de Colombia. |

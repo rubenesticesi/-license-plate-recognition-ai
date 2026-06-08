@@ -1,0 +1,33 @@
+# Entorno Virtual y Dependencias
+env/
+venv/
+.env
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de PyTorch y Modelos
+*.pt
+!models/best.pt  # Excepto nuestro mejor modelo entrenado
+
+# Datos crudos y exportaciones (demasiado pesados para GitHub)
+data/raw/
+data/*.zip
+
+# Logs y Runs de entrenamiento de YOLOv8
+runs/
+!runs/detect/license_plate_maestria/results.csv
+!runs/detect/license_plate_maestria/weights/best.pt
+yolov8n.pt
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDEs
+.vscode/
+.idea/

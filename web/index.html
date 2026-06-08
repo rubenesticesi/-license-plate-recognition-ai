@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALPR System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-effect"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Sistema Automático de Placas</h1>
+            <p>Visión por Computador con YOLOv8 + EasyOCR</p>
+        </header>
+
+        <main>
+            <div class="controls-card glass-panel">
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="switchTab('upload-tab')"><i class="fas fa-upload"></i> Subir Imagen</button>
+                    <button class="tab-btn" onclick="switchTab('validation-tab')"><i class="fas fa-database"></i> Usar Validación</button>
+                </div>
+
+                <!-- Tab Subir -->
+                <div id="upload-tab" class="tab-content active">
+                    <div class="upload-area" id="drop-zone" onclick="document.getElementById('file-input').click()">
+                        <i class="fas fa-cloud-upload-alt fa-3x"></i>
+                        <p>Arrastra una imagen o haz clic para subir</p>
+                        <input type="file" id="file-input" accept="image/*" style="display:none" onchange="handleFileSelect(event)">
+                    </div>
+                </div>
+
+                <!-- Tab Validación -->
+                <div id="validation-tab" class="tab-content" style="display: none;">
+                    <div class="validation-area">
+                        <button class="btn btn-primary" onclick="loadRandomValidationImage()">
+                            <i class="fas fa-random"></i> Cargar Imagen Aleatoria
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="action-area">
+                    <button id="process-btn" class="btn btn-action" disabled onclick="processImage()">
+                        <i class="fas fa-cogs"></i> Analizar Placa
+                    </button>
+                </div>
+            </div>
+
+            <!-- Resultados -->
+            <div class="results-section" id="results-section" style="display: none;">
+                <div class="image-comparison">
+                    <div class="image-box glass-panel">
+                        <h3>Original</h3>
+                        <div class="img-container">
+                            <img id="original-img" src="" alt="Original">
+                        </div>
+                    </div>
+                    <div class="image-box glass-panel">
+                        <h3>Detección YOLO</h3>
+                        <div class="img-container">
+                            <img id="result-img" src="" alt="Resultado">
+                            <div id="loader" class="loader"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card glass-panel">
+                    <h3>Resultados del Análisis</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="label">Placa Detectada</span>
+                            <span class="value plate-text" id="plate-text">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Confianza YOLO</span>
+                            <span class="value" id="yolo-conf">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Confianza OCR</span>
+                            <span class="value" id="ocr-conf">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="label">Formato Válido</span>
+                            <span class="value" id="format-valid">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
